@@ -14,9 +14,9 @@ public class ProbeForce : MonoBehaviour {
 		Probe = gameObject;
 		//Debug.Log (ship.name);
 		
-			Probe.rigidbody.AddForce(0,9.6f,0);
+			Probe.rigidbody.AddForce(0,9.8f,0);
 			Probe.rigidbody.AddRelativeForce(0,0,-9);
-			Probe.rigidbody.AddRelativeTorque(-.004f,0,0);
+			//Probe.rigidbody.AddRelativeTorque(-.0001f,0,0);
 			//Debug.Log ("adding Force");					
 	}
 }

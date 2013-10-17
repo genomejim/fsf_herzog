@@ -7,7 +7,7 @@ public class SpawnEnemy : MonoBehaviour {
 	void Start () 
 	{
 		//EnemyStart.Set(0,0,38);
-		InvokeRepeating( "spawn", 3, 1 );
+		InvokeRepeating( "spawn", 3, 3 );
 	}
 	
 	void spawn ()

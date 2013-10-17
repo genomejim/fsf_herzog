@@ -3,20 +3,23 @@ using System.Collections;
 
 public class ShipForce : MonoBehaviour {
 
-	public GameObject ship;
+	public GameObject Ship;
+	public float ShipClimbAngle;
+	public float ShipAbsoluteLift;
 	// Use this for initialization
 	void Start () {
-	
+		ShipClimbAngle = -.001f;
+		ShipAbsoluteLift = 19.35f;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		ship = gameObject;
+		Ship = gameObject;
 		//Debug.Log (ship.name);
 		
-			ship.rigidbody.AddForce(0,19.85f,0);
-			ship.rigidbody.AddRelativeForce(0,0,9);
-			ship.rigidbody.AddRelativeTorque(-.005f,0,0);
+			Ship.rigidbody.AddForce(0,ShipAbsoluteLift,0);
+			Ship.rigidbody.AddRelativeForce(0,0,9);
+			Ship.rigidbody.AddRelativeTorque(ShipClimbAngle,0,0);
 			//Debug.Log ("adding Force");					
 	}
 }
